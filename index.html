@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b417897491.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="path/to/swiper.min.js"></script>
+    
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <style>      
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            color: #000000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .btn-outline-custom {
+            color: #000000;
+            border-color: #000000;
+        }
+
+        .btn-outline-custom:hover {
+            color: #ff0252;
+            background-color: #000000;
+            border-color: #ffffff;
+        }
+
+        #btn_2:hover {
+            color: #f2ff02;
+            background-color: #000000;
+            border-color: #ffffff;
+        }
+
+        #btn_3:hover {
+            color: #00ff48;
+            background-color: #000000;
+            border-color: #ffffff;
+        }
+        .why-us .container {
+  box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+  background: #fff;
+}
+
+.why-us .icon-box+.icon-box {
+  margin-top: 50px;
+}
+
+.why-us .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: #f3f8fa;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.why-us .icon-box .icon i {
+  color: #68A4C4;
+  font-size: 32px;
+}
+
+.why-us .icon-box:hover .icon {
+  background: #68A4C4;
+}
+
+.why-us .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.why-us .icon-box .title {
+  margin-left: 95px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.why-us .icon-box .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.why-us .icon-box .title a:hover {
+  color: #68A4C4;
+}
+
+.why-us .icon-box .description {
+  margin-left: 95px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.why-us .video-box {
+  position: relative;
+}
+
+.why-us .video-box img {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.why-us .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#68A4C4 50%, rgba(104, 164, 196, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+  overflow: hidden;
+}
+
+.why-us .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.why-us .play-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation: pulsate-btn 2s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(104, 164, 196, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+.why-us .play-btn:hover::after {
+  border-left: 15px solid #68A4C4;
+  transform: scale(20);
+}
+
+.why-us .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  animation: none;
+  border-radius: 0;
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.counts {
+  padding: 70px 0 60px;
+}
+
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #f1f6fe;
+}
+
+.counts .count-box i {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #106eea;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  line-height: 0;
+  border-radius: 50px;
+  border: 5px solid #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counts .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #062b5b;
+}
+
+.counts .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.swiper-container {
+    margin-top: 60px;
+    width: 100%; /* Change width to 100% */
+    display: flex;
+    justify-content: flex-end; /* Align items to the end (right side) */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background-color: #ffffff;
+    color: #060606;
+    border-radius: 10px;
+    height: 85px;
+    width: 100px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-flex;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+    opacity: 1;
+}    
+
+
+.card{ 
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #f1f6fe;
+
+}
+        
+
+
+@media (min-width: 768px) {
+            .info-card {
+                max-width: 400px; /* Adjust the max-width as needed */
+                margin: 0 auto;
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 767px) {
+            .info-card {
+                margin-top: 20px; /* Add some top margin for spacing */
+            }
+        }
+
+
+        .services .icon-box {
+  text-align: center;
+  border: 1px solid #d5e1ed;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #080808;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #7b7b7b;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+  z-index: -1;
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #000000;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  background: #282828;
+  border-color: #5b5b5b;
+}
+
+.services .icon-box:hover .icon {
+  background: yellow;
+}
+
+.services .icon-box:hover .icon i {
+  color: #000000;
+}
+
+.services .icon-box:hover .icon::before {
+  background: rgba(178, 191, 2, 0.3);
+}
+
+.services .icon-box:hover h4 ,
+.services .icon-box:hover p {
+  color: yellow;
+}
+
+
+/*--------------------------------------------------------------
+# Services List Section
+--------------------------------------------------------------*/
+.services-list .service-item {
+  position: relative;
+}
+
+.services-list .service-item .icon i {
+  font-size: 32px;
+  line-height: 0;
+  margin-right: 20px;
+  color: #38618e;
+}
+
+.services-list .service-item .title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  justify-content: left;
+}
+
+.services-list .service-item .title a {
+  color: var(--color-secondary);
+}
+
+.services-list .service-item .title a:hover {
+  color: #38618e;
+}
+
+.services-list .service-item .description {
+  line-height: 24px;
+  font-size: 14px;
+  justify-content: left;
+}
+
+
+#cardCarousel {
+            margin-top: 50px; /* Adjust the margin-top value as needed */
+        }
+
+
+
+        .features {
+  padding-top: 0px;
+}
+
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%); /* Change the color of the arrow */
+        }
+
+.features .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+  border: 1px solid #eef0ef;
+}
+
+.features .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.features .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.features .icon-box h3 a {
+  color: #37423b;
+  transition: 0.3s;
+}
+
+.features .icon-box:hover {
+  border-color: #00e5ff;
+}
+
+.features .icon-box:hover h3 a {
+  color: #00e5ff;
+}        
+
+
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonial-container {
+      position: relative;
+      width: 100%;
+      max-width: 1300px; /* Adjust the max-width as needed */
+      margin: 0 auto;
+      height: 400px;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .swiper-button-next {
+      right: 10px; /* Adjust the right position as needed */
+    }
+
+    .swiper-button-prev {
+      left: 10px; /* Adjust the left position as needed */
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 350px;
+    }
+
+    .testimonial-content img {
+      border-radius: 50%;
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-content p{
+      align-items: center;
+      text-align: center;
+      font-size: medium;
+    }
+
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq {
+  background: linear-gradient(42deg, #2301ff 0%, #060500 100%);
+  height: 830px;
+}
+
+.faq .section-title h2,
+.faq .section-title p {
+  color: #fff;
+}
+
+.faq .section-title h2::after {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.faq .faq-list {
+  padding: 0 100px;
+}
+
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li+li {
+  margin-top: 15px;
+}
+
+.faq .faq-list li {
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #8577fb;
+}
+
+.faq .faq-list .icon-show,
+.faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list a.collapsed {
+  color: #2c4964;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #5846f9;
+}
+
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #000000;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #000000;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+#footer .social-links {
+  margin: 0 0 40px 0;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #e5ff00;
+  color: #000000;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #ff01ee;
+  color: #000000;
+  text-decoration: none;
+}
+
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
+
+#footer .credits {
+  font-size: 13px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar bg-body-tertiary" style="height: 90px;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Sketo-Logo-HD.png" alt="Bootstrap" width="130" height="80">
+            </a>
+            <form class="d-flex">
+                <button class="btn btn-outline-custom me-2" type="button" data-bs-toggle="modal"
+                    data-bs-target="#freeDemoModal">Free Demo</button>
+                <button class="btn btn-outline-custom me-2" id="btn_2" type="button" data-bs-toggle="modal"
+                    data-bs-target="#applyNowModal" style="color: rgb(255, 255, 255); background-color: rgb(0, 8, 255);border-color: #000000;">Apply Now</button>
+                <a href="https://wa.me/message/RTGYV5PGIEOYC1" class="btn btn-outline-custom me-2" id="btn_3"
+                    type="button"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Free Demo Modal -->
+    <div class="modal fade" id="freeDemoModal" tabindex="-1" aria-labelledby="freeDemoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="freeDemoModalLabel">Book a Free Demo Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>To Book your Free Demo ↓</p>
+                    <p>Call us Now at <i class="fa-solid fa-phone-volume"></i> <strong>+91-7219322283</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply Now Modal -->
+    <div class="modal fade" id="applyNowModal" tabindex="-1" aria-labelledby="applyNowModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyNowModalLabel">Apply Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Contact No.</label>
+                            <input type="tel" class="form-control" id="phone" maxlength="10">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- ======= Why Us Section ======= -->
+     <section class="why-us section-bg mt-2 d-flex justify-content-center text-center" data-aos="fade-up" date-aos-delay="200">
+      <div class="row" style="margin-left: 50px;margin-right: 50px;">
+          <div class="col-lg-7 video-box justify-content-center">
+              <img src="Untitled design.png" style="margin-top: 50px;" class="img-fluid" alt="" >
+              <a href="https://www.youtube.com/watch?v=JPT36MQKM-w" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+  
+          <div class="col-lg-5 d-flex flex-column justify-content-center p-5">
+              <h2>Professional Program in Data Science and Artificial Intelligence</h2>
+              <p>Get 100% Job Guarantee with Us</p>
+              <p><strong>EMI Starting at ₹5500/-</strong></p>
+              <p><strong>Duration of the Program:- </strong>8-9 Months</p>
+              <p><strong>Eligibility:- </strong>Anyone Eager to Learn</p>
+  
+              <div class="d-flex">
+                  <button class="btn btn-outline-custom me-2" type="button" data-bs-toggle="modal" data-bs-target="#freeDemoModal" style="width: 200px; height: 50px;">Free Demo</button>
+                  <button class="btn btn-outline-custom me-2" id="btn_2" type="button" data-bs-toggle="modal" data-bs-target="#applyNowModal" style="width: 200px; height: 50px;color: rgb(255, 255, 255); background-color: rgb(0, 8, 255);border-color: #000000;">Apply Now</button>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+
+ <!-- ======= Carousale ======= -->
+ <!-- <section>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+         
+          <div class="swiper-slide"><i class="fa-brands fa-google"></i></div>
+        
+          <div class="swiper-slide"><i class="fa-brands fa-google-pay"></i></div>
+         
+          <div class="swiper-slide"><i class="fa-brands fa-youtube"></i></div>
+         
+          <div class="swiper-slide"><i class="fa-brands fa-android"></i></div>
+          
+          <div class="swiper-slide"><i class="fa-brands fa-telegram"></i></div>
+      </div>
+    
+      <div class="swiper-pagination"></div>
+  </div>
+
+ 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
+
+  <!-- Initialize Swiper -->
+ <!-- <script>
+      var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          spaceBetween: 50,
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          loop: true,
+          autoplay: {
+              delay: 1000,
+              disableOnInteraction: true,
+          },
+      });
+  </script>
+
+
+
+  </section>--><!-- End Corausal Section -->
+
+
+
+
+   <!-- ======= Counts Section ======= -->
+   <section id="counts" class="counts">
+    <div class="container " data-aos="fade-up">
+
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 ">
+          <div class="count-box">
+            <i class="fa-regular fa-clock"></i>
+            <h2>1000+</h2>
+            <p>Happy Students</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="fa-solid fa-list-check"></i>
+            <h2>100+</h2>
+            <p>Projects</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="fa-solid fa-headset"></i>
+            <h2>365</h2>
+            <p>Days Of Support</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="fa-solid fa-user-tie"></i>
+            <h2>10+</h2>
+            <p>Years of Experience</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+
+
+
+<!-- ======= Placement Section ======= -->
+ <!-- <section>
+
+    <div class="container" style="margin-top: 25px;">
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+      <div class="card info-card revenue-card">
+
+        <div class="filter">
+          <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li class="dropdown-header text-start">
+              <h6>Filter</h6>
+            </li>
+
+            <li><a class="dropdown-item" href="#">Today</a></li>
+            <li><a class="dropdown-item" href="#">This Month</a></li>
+            <li><a class="dropdown-item" href="#">This Year</a></li>
+          </ul>
+        </div>
+
+        <div class="card-body">
+          <h2 class="card-title">Average placement <span>| This Month</span></h2>
+
+          <div class="d-flex align-items-center">
+            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+              <i class="bi bi-currency-dollar"></i>
+            </div>
+            <div class="ps-3 text-center">
+              <h1>56</h1>
+              <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>--><!-- End Placement Card -->
+  <div class="container mt-3">
+    <div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded" >
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col-4">
+       <h3>Placement Stats</h3>
+      </div>
+      <div class="col-4">
+        <h4><strong>57%</strong></h4>
+        <p>Avg Salary Hike</p>
+      </div>
+      <div class="col-4">
+        <h4><strong>1.23 Cr</strong></h4>
+        <p>Higest Salary</p>
+      </div>
+      <div class="col-4">
+        
+      </div>
+      <div class="col-4">
+        <h4><strong>3500+</strong></h4>
+        <p>Career Transisations</p>
+      </div>
+      <div class="col-4">
+        <h4><strong>450+</strong></h4>
+        <p>Hiring Partners</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+    <!-- ======= Our Services Section ======= -->
+    <div class="container mt-5">
+      <div class="card" style="box-shadow: black;">
+        <div class="card-body">
+    <section id="services-list" class="services-list" >
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>This Program will kick-start your</h2>
+  <h2 style="color: #106eea;">Data Science and Artificial Intelligence <span style="display: block;color: #000000;">Journey.</span></h2>
+
+        </div>
+
+        <div class="row gy-5" style="margin-top: 25px;">
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="fa-regular fa-clock" style="color: #f57813;"></i></div>
+            <div>
+              <h4 class="title">200+ hours of learning</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-tv" style="color: #2eca6a;"></i></div>
+            <div>
+              <h4 class="title">Immersive Learning Platform</h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-book" style="color: #d90769;"></i></div>
+            <div>
+              <h4 class="title">60+ Industry Projects</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-laptop-code" style="color: #15bfbc;"></i></div>
+            <div>
+              <h4 class="title">Designed for everyone</h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-thumbs-up" style="color: #f5cf13;"></i></div>
+            <div>
+              <h4 class="title">10x more employable</h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-4 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon flex-shrink-0"><i class="fa-solid fa-user-tie" style="color: #1335f5;"></i></div>
+            <div>
+              <h4 class="title">Arizona State University (USA) Alumni Status</h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div><!-- End Service Item -->
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </section><!-- End Our Services Section -->
+
+
+
+    <h2 style="margin-top: 30px;"><button class="btn btn-outline-custom me-2" type="button" data-bs-toggle="modal"
+      data-bs-target="#freeDemoModal">Free Demo</button>
+  <button class="btn btn-outline-custom me-2" id="btn_2" type="button" data-bs-toggle="modal"
+      data-bs-target="#applyNowModal" style="color: rgb(255, 255, 255); background-color: rgb(0, 8, 255);border-color: #000000;">Apply Now</button>
+  <a href="https://wa.me/message/RTGYV5PGIEOYC1" class="btn btn-outline-custom me-2" id="btn_3"
+      type="button"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a></h2>
+
+  <!-- ======= course curriculam Section ======= -->
+  <section id="services" class="services">
+    <div class="container" style="margin-top: 30px;">
+      <h2>Course Curriculam</h2>
+      <div class="section-title">
+        
+        <p style="text-align: center;">This course will include the following sub-topics</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-brands fa-python"></i></div>
+            <h4>Python with Libraries</h4>
+            <p>Kickstart you DS with AI journey by learning the most user-friendly and powerfull Python language with its libraries which are used to create charts and data-cleaning.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-solid fa-database"></i></i></div>
+            <h4>SQL</h4>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+            <h4>Power BI</h4>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-regular fa-chart-bar"></i></div>
+            <h4>Tableau</h4>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h4>Machine Learning</h4>
+            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="fa-solid fa-laptop"></i></i></div>
+            <h4>Artificial Intelligence</h4>
+            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End course curriculam Section -->
+
+  <section>
+    <div class="modal fade" id="downloadNowModal" tabindex="-1" aria-labelledby="applyNowModalLabel" aria-hidden="true" style="align-self: center;">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="applyNowModalLabel">Download Syllabus</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name">
+                      </div>
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="mb-3">
+                          <label for="phone" class="form-label">Contact No.</label>
+                          <input type="tel" class="form-control" id="phone" maxlength="10">
+                      </div>
+                      <button type="submit" onclick="submitForm()" class="btn btn-secondary">Submit</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+ <!-- Download Button -->
+ <h2 style="margin-top: 50px;">
+ <button class="btn btn-outline-custom me-2"  id="btn_2" type="button" data-bs-toggle="modal" data-bs-target="#downloadNowModal">Download Syllabus</button>
+</h2>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+ <!-- JavaScript -->
+ <script>
+     function submitForm() {
+         var filePath = '"D:\My own\SKETO\Internship\webpage_1\Expert Program in Data Science and AI.pdf"';
+
+            // Create a temporary anchor element
+            var anchor = document.createElement('a');
+            anchor.href = filePath;
+            anchor.target = '_blank';
+
+            // Trigger a click on the anchor to start the download
+            anchor.click();
+
+            // Remove the temporary anchor element
+            document.body.removeChild(anchor);
+        }
+     
+ </script>
+  </section>
+
+  <h2 style="margin-top: 50px;">Get a real world understanding</h2>
+  <h2 style="color: #000000;">through industry <span style="display: block;color: #03f913;">projects.</span></h2>
+
+<section>
+  
+  <div class="d-flex justify-content-center align-items-center">
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 300px; border: #000000;">
+        <div class="carousel-inner">
+            <!-- First Card -->
+            <div class="carousel-item active">
+                <div class="card" style="width: 18rem;">
+                    <img src="Sketo-Logo-HD.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Weather Forecasting</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Card -->
+            <div class="carousel-item">
+                <div class="card" style="width: 18rem;">
+                    <img src="Sketo-Logo-HD.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Chat Bot</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Third Card -->
+            <div class="carousel-item">
+                <div class="card" style="width: 18rem;">
+                    <img src="Sketo-Logo-HD.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Sales Prediction</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fourth Card -->
+            <div class="carousel-item">
+                <div class="card" style="width: 18rem;">
+                    <img src="Sketo-Logo-HD.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Object Identification</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Fifth Card -->
+            <div class="carousel-item">
+                <div class="card" style="width: 18rem;">
+                    <img src="Sketo-Logo-HD.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Text summarization</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+</section>
+
+<h2 style="margin-top: 50px;">Tools and technologies covered</h2>
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up" style="margin-top: 50px;">
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-3 col-md-4">
+        <div class="icon-box">
+          <i class="fa-brands fa-python" style="color: #ffbb2c;"></i>
+          <h3>Python</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="fa-solid fa-database" style="color: #5578ff;"></i>
+          <h3>MySQL</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="fa-regular fa-file-excel" style="color: #e80368;"></i>
+          <h3>Excel</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="icon-box">
+          <i class="fa-solid fa-chart-simple" style="color: #e361ff;"></i>
+          <h3>Power Bi</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-table" style="color: #47aeff;"></i>
+          <h3>Tableau</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-paper-plane" style="color: #ffa76e;"></i>
+          <h3>Tensor-flow</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-brands fa-square-github" style="color: #11dbcf;"></i>
+          <h3>Github</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-brands fa-aws" style="color: #4233ff;"></i>
+          <h3>AWS</h3>
+        </div>
+      </div>
+  </div>
+</section><!-- End Features Section -->
+
+<h2 style="margin-top: 50px;">
+  <button class="btn btn-outline-custom me-2" id="btn_2" type="button" data-bs-toggle="modal"
+  data-bs-target="#applyNowModal" style="color: rgb(255, 255, 255); background-color: rgb(0, 8, 255);border-color: #000000;">Apply Now</button>
+</h2>
+
+<h2 style="margin-top: 50px;">
+  Admission Process
+</h2>
+<section style="margin-top: 20px;">
+
+  <section id="resume" class="resume">
+    <div class="container" data-aos="fade-up">
+
+        <div class="col-lg-6">
+          <h3 class="resume-title"></h3>
+          <div class="resume-item">
+            <h4>Step 1</h4>
+            <li>
+              Click on <a href="#form">Apply Now</a> 
+            </li>
+          </div>
+          <div class="resume-item">
+            <h4>Step 2</h4>  
+            <li>
+              Fill the application form
+            </li>
+          </div>
+          <div class="resume-item">
+            <h4>Step 3</h4>  
+            <li>
+              Clear the admission test
+            </li>
+          </div>
+          <div class="resume-item">
+            <h4>Step 4 </h4>  
+            <li>
+              Pay to reserve your seat
+            </li>
+          </div>
+          <div class="resume-item">
+            <h4>Step 5 </h4>  
+            <li>
+              Begin with your learning journey
+            </li>
+          </div>
+          <div class="resume-item">
+            <h4>Get your dream Job </h4>  
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Application section -->
+</section>
+
+
+<!-- ======= Testimonials Section ======= -->
+<section>
+  <div class="testimonial-container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide" style="background-image: url('testimonial.png');">
+          <div class="testimonial-content">
+            <img src="testimonials-1.jpg" alt="Student 1">
+            <p>Testimonial from Student 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide" style="background-image: url('testimonial.png');">
+          <div class="testimonial-content">
+            <img src="testimonials-2.jpg" alt="Student 2">
+            <p>Testimonial from Student 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide" style="background-image: url('testimonial.png');">
+          <div class="testimonial-content">
+            <img src="testimonials-3.jpg" alt="Student 3">
+            <p>Testimonial from Student 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide" style="background-image: url('testimonial.png');">
+          <div class="testimonial-content">
+            <img src="testimonials-4.jpg" alt="Student 4">
+            <p>Testimonial from Student 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="swiper-slide" style="background-image: url('testimonial.png');">
+          <div class="testimonial-content">
+            <img src="testimonials-5.jpg" alt="Student 5">
+            <p>Testimonial from Student 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</section>
+
+<!-- ======= Form Section ======= -->
+<section>
+
+  <div class="container" id="form">
+    <div class="row" style="border: 1px solid; border-radius: 10px; overflow: hidden; background-color: #ffffff;">
+      <div class="col-7" style="padding: 20px; color: rgb(0, 0, 0);">
+        <form class="row g-3">
+        <div class="col-md-6">
+          <label for="inputname" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputname">
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputeducationlevel" class="form-label">Education Level</label>
+          <select id="inputeducationlevel" class="form-select">
+            <option selected>Choose...</option>
+            <option>High School</option>
+            <option>Undergraduate</option>
+            <option>Graduate</option>
+            <option>Post Graduate</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputwork" class="form-label">Professional Background</label>
+          <select id="inputwork" class="form-select">
+            <option selected>Choose...</option>
+            <option>Technical</option>
+            <option>Non-Technical</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-outline-custom me-2" id="btn_3">Apply Now</button>
+        </div>
+      </form></div>
+      <div class="col-5" style="border-left: 1px; padding: 20px;background-image: url(Pastel\ Modern\ Growth\ Mindset\ Roadmap\ Infographic\ Instagram\ Post.png); background-size: cover; background-position: center; "></div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+ <!-- ======= Frequently Asked Questions Section ======= -->
+ <section id="faq" class="faq" >
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2 style="margin-top: 30px; padding-top: 40px; margin-bottom: 40px;">Frequently Asked Questions</h2> 
+    </div>
+
+    <div class="faq-list">
+      <ul>
+        <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-circle-question"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1" style="text-decoration: none;">1. What is the difference between Data Science and Computer Science? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Data Science involves the analysis of large datasets using coding and statistics to find patterns in this data. Computer Science, on the other hand, involves using logic to write codes that will help complete tasks of varying levels of complexity.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-circle-question"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed" style="text-decoration: none;">2. Can I pursue a Data Science degree without Maths or Computer Science in my undergrad? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Even if you think you have previously struggled with mathematics, you can still master the data science math abilities. No doubt , Data Science requires an understanding of math, but the necessary Data Science math skills can be learned.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-circle-question"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed" style="text-decoration: none;">3. What are the main components of Data Science? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              The main components of Data Science are data collection , data preprocessing ,data analysis and data visualization
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-circle-question"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed" style="text-decoration: none;">4. What are the main components of Artificial Intelligence? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              The main components of Artificial Intelligence are Machine Learning, Deep Learning and Natural Language Processing.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-circle-question"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed" style="text-decoration: none;">5. Why is Data Science trending? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              In this modern world, huge amounts of data is being produced every second. Data Science helps make sense of this data and is a professional career.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section><!-- End Frequently Asked Questions Section -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="Sketo-Logo-HD.png" alt="Bootstrap" width="100" height="50">
+  </a>
+    <div class="social-links">
+      <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="fa-brands fa-skype"></i></i></a>
+      <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; Copyright <strong><span> SKETO Infotech</span></strong>. All Rights Reserved
+    </div>
+    
+  </div>
+</footer><!-- End Footer -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
